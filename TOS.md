@@ -6,13 +6,15 @@ Terraform est un outil d'infrastructure en tant que code (IaC) qui permet de cr�
 
 # Objectif
 Ce TOS a pour but de compléter les TOS vues précédement (Déploiement d'une App Service et d'une VM), par l'ajout d'un NSG à notre VM, et le déploiement d'une Azure Function.
+Notre déploiement sera effectué à l'aide d'une Pipeline Azure DevOps.
+Voir le TOS suivant pour la mise en place de cette Pipeline : https://github.com/AlixBnd/TOS-CICD-Terraform/tree/main
 
 # Pré-requis
 
  - Compréhension basique de Terraform
  - Compréhension basique d'Azure et Azure DevOps
  - Extensions Azure DevOps
-	 -  Azures Pipelines Terraform Task by Jason Johnson
+	 - Azures Pipelines Terraform Task by Jason Johnson
 	 - Terraform by Microsoft Labs
 
 
