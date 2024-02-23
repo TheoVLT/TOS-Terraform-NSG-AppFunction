@@ -27,5 +27,5 @@ Dans votre repo Azure DevOps, vous devriez avoir une architecture similaire :
 
 ↳ 📄 variables.tf
 
-Si ce n'est pas le cas veuillez reprendre le TOS contenu dans Objectif.  
+Si ce n'est pas le cas veuillez reprendre le TOS contenu dans la partie Objectif.  
 
