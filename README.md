@@ -78,6 +78,10 @@ Ce qui donne :
  <img width="1477" alt="image" src="https://github.com/TheoVLT/TOS-Terraform-NSG-AppFunction/assets/148872577/1578029b-5f63-4830-a4bc-152fb946c239">
 
 ### Ajout d'une Azure Function  
+
+Ici, nous déployons une Azure Function, qui nous sera notamment utile pour nos plugins.  
+Pensez à adapter certaines données telles que les plans tarifaires, selon vos besoins.  
+
   ```hcl
 # Ajout des ressources Azure Function
 
@@ -109,3 +113,22 @@ resource "azurerm_linux_function_app" "functionapp-app-test" {
   site_config {}
 }
 ```
+L'Azure Function nécessite deux ressources pour être déployée :
+-	Un compte de stockage
+-	Un plan app service
+
+Le bloc "azurerm_storage_account", permet de déployer un compte de stockage.  
+On y renseignera notamment le plan tarifaire (Standard), et la redondance de stockage (LRS).  
+
+Le bloc "azurerm_service_plan", permet de déployer un plan app service. Nous n'utiliserons pas celui déjà existant (pour la web app), à cause du plan tarifaire Free qui n'est pas compatible avec les Azure Functions.  
+On y renseignera l'OS utilisé (Linux), et le plan tarifaire (S1) de l'azure function.  
+
+Enfin, le dernier bloc "azurerm_linux_function_app" va déployer notre Azure Function en pointant vers les différentes ressources utilisées selon ses besoins.  
+
+Résultat :  
+<img width="1511" alt="image" src="https://github.com/TheoVLT/TOS-Terraform-NSG-AppFunction/assets/148872577/a0ae513a-07a9-412d-8558-df3d7c1ee5f5">
+
+Pour finir, vous constaterez que plusieurs configurations sont à définir selon vos besoins :
+
+
+![image](https://github.com/TheoVLT/TOS-Terraform-NSG-AppFunction/assets/148872577/8679c879-efec-4d07-99fd-deee4d022f20)
