@@ -64,13 +64,13 @@ resource "azurerm_network_security_group" "ssh_nsg" {
 Le premier bloc permet de définir le nom de notre ressource dans le fichier main.tf (azurerm_network_security_group), le nom de la ressource visible sur Azure (ssh_nsg sur la ligne "name"), la région qui correspond à celle définie précédemment, et le groupe de ressource défini précédemment.  
 
 Ensuite, nous ajoutons la règle que nous nommons "allow_ssh" : 
-	- priority : nous définissons l'ordre des règles (1001 par exemple)
- 	- direction : indique si la règle sera évaluée sur le trafic entrant ou sortant (Inbound car entrant)
-  	- access : indique si le trafic réseau sera autorisé ou refusé (Allow pour autoriser)
-   	- protocol : protocole réseau auquel cette règle s'applique (Tcp pour SSH)
-    	- source_port_range : port source ("*" accès depuis partout)
-     	- destination_port_range : port de destination (22 pour le SSH)
-      	- source_address_prefix : CIDR ou plage d'adresses IP source ou * pour correspondre à n'importe quelle adresse IP
-       	- destination_address_prefix : CIDR ou plage d'adresses IP de destination ou * pour correspondre à n'importe quelle adresse IP
+	- priority : nous définissons l'ordre des règles (1001 par exemple)  
+ 	- direction : indique si la règle sera évaluée sur le trafic entrant ou sortant (Inbound car entrant)  
+  	- access : indique si le trafic réseau sera autorisé ou refusé (Allow pour autoriser)  
+   	- protocol : protocole réseau auquel cette règle s'applique (Tcp pour SSH)  
+    	- source_port_range : port source ("*" accès depuis partout)  
+     	- destination_port_range : port de destination (22 pour le SSH)  
+      	- source_address_prefix : CIDR ou plage d'adresses IP source ou * pour correspondre à n'importe quelle adresse IP  
+       	- destination_address_prefix : CIDR ou plage d'adresses IP de destination ou * pour correspondre à n'importe quelle adresse IP  
 
  <img width="1477" alt="image" src="https://github.com/TheoVLT/TOS-Terraform-NSG-AppFunction/assets/148872577/1578029b-5f63-4830-a4bc-152fb946c239">
