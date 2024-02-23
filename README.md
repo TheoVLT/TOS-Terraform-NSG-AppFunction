@@ -63,7 +63,7 @@ resource "azurerm_network_security_group" "ssh_nsg" {
 
 Le premier bloc permet de définir le nom de notre ressource dans le fichier main.tf (azurerm_network_security_group), le nom de la ressource visible sur Azure (ssh_nsg sur la ligne "name"), la région qui correspond à celle définie précédemment, et le groupe de ressource défini précédemment.  
 
-Ensuite, nous ajoutons la règle que nous nommons "allow_ssh" : 
+Ensuite, nous ajoutons la règle que nous nommons "allow_ssh" :  
 	- priority : nous définissons l'ordre des règles (1001 par exemple)  
  	- direction : indique si la règle sera évaluée sur le trafic entrant ou sortant (Inbound car entrant)  
   	- access : indique si le trafic réseau sera autorisé ou refusé (Allow pour autoriser)  
