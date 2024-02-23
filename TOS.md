@@ -17,4 +17,15 @@ Voir le TOS suivant pour la mise en place de cette Pipeline : https://github.com
 	 - Azures Pipelines Terraform Task by Jason Johnson
 	 - Terraform by Microsoft Labs
 
+## Fichiers nécessaires au déploiement
+
+Dans votre repo Azure DevOps, vous devriez avoir une architecture similaire :
+
+📂 Terraform
+
+↳ 📄 main.tf
+
+↳ 📄 variables.tf
+
+Si ce n'est pas le cas veuillez reprendre le TOS contenu dans Objectif.  
 
