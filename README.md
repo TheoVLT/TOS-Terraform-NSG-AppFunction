@@ -1,1 +1,1 @@
-# TOS-Terraform-NSG-AppFunction
+# TOS Terraform NSG & AppFunction
