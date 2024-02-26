@@ -92,8 +92,8 @@ resource "azurerm_linux_virtual_machine" "vm-build" {
   resource_group_name             = azurerm_resource_group.test123.name
   disable_password_authentication = false
   size                            = "Standard_B1ls"
-  admin_username                  = "theo"
-  admin_password                  = "PrTvQr0203."
+  admin_username                  = "votreuser"
+  admin_password                  = "votrecode"
   network_interface_ids = [
     azurerm_network_interface.nic-vm-agent.id,
   ]
